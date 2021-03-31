@@ -12,7 +12,17 @@
   
 import { parseISO, format } from 'date-fns'
 
-export default function Test5({ dateString }: { dateString: string }) {
-  const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+export default function Test6({ dateString }: { dateString: string }) {
+  // const date = parseISO(dateString)
+  // return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+    return <>
+        <h1>Client Test 5</h1>
+      <button
+        onClick={() => {
+          throw new Error('Client Test 5')
+        }}
+      >
+        Click me to throw an Error
+      </button>
+    </>
 }
